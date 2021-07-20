@@ -47,7 +47,7 @@ public class Test012
 		
 		//[같이 풀이한 내용]
 		
-import java.io.BufferedReader; //@ 한번 위에쓰면 하단 모든 버퍼드~가 강원도 횡성에사는 버퍼드리더로 특정됨
+import java.io.BufferedReader; //@ 한번 위에쓰면 하단 모든 버퍼드~가 강원도 횡성에 사는 버퍼드리더로 특정됨
 							   //@ 만약 안쓰면 각 버퍼드~ 나올때마다 java.io.BufferedReader... 로 써야됨 귀찮음 
 import java.io.InputStreamReader;
 // import java.lang.String; //@ lang = language, 얘네들은 자바가 임의로 미리 임포트 해놓음

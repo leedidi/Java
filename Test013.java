@@ -86,6 +86,7 @@ public class Test013
 																//@ 지금 외울필요는X
 
 		String strName; //@문자열이니까 String! 난 처음에 int썼음...ㅠㅋㅋ   //-- 이름 변수
+		// * (변수 팁) 숫자: int, 소수점 있는 숫자 : double, 한글자 문자는 char, 두글자 이상 문자는 String!
 		int nkor, nEng, nMat;												 //-- 국어, 영어, 수학 점수 변수
 		int nTot;															 //-- 총점 변수
 
