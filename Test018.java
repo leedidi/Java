@@ -28,6 +28,7 @@ public static void main(String[] args)
 		sc = new Scanner(sc.next()).useDelimiter("\\s*,\\s*");
 		//               ---------
 		//              장진하,90,80,70
+		// @ '//'s 두개사용! 임의의 문자열 뜻함
 		
 		name = sc.next();		// 장진하
 		kor = sc.nextInt();		// 90
