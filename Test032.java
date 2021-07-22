@@ -124,7 +124,7 @@ public class Test032
 		System.out.print("연산자 입력[+ - * /] : " );
 		// op = br.readLine(); 문자 = 문자열(안 담김!)
 		// op = Integer.parseInt(br.readLine()); //"+" >> @ 숫자형태가 아님, 바뀌지 않음
-		// op = System.in.read(); //@ char = int
+		// op = System.in.read(); //@ op(char) = system.in.read()(int)
 		op = (char)System.in.read(); //얘는 아스키코드 가져오는거! 버퍼드리더는 문자열고대로가져오는거!!!
 
 		// 확인(테스트)
@@ -227,7 +227,8 @@ public class Test032
 			result = -1; //@ 0,-1 등 오류 값이라는걸 알 수 있는, 구분할 수 있는 값 담기
 
 		System.out.printf("\n>> %d %c %d = %d\n", a, op, b, result);
-			//@ %c : 문자
+			//@ %c : 문자 형태
+			//@ 정수 형태: %d / 실수 형태: %f / 문자열 형태 : %s / \n: 개행
 
 
 
