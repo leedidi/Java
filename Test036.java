@@ -171,7 +171,7 @@ public class Test036
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		System.out.print("이름 입력 : ");
-		String name = br.readLine();
+		String name = br.readLine(); // br.readLine()=문자열, System.in.read()=int.
 
 		System.out.print("국어점수 입력 : " );
 		int kor = Integer.parseInt(br.readLine());

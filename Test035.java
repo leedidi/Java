@@ -37,7 +37,7 @@ public class Test035
 
 		// 연산 및 처리 + 결과 출력
 		System.out.print("알파벳 한 문자 입력 : ");
-		alp = System.in.read();
+		alp = System.in.read(); // int = int
 
 		// 대문자 A의 아스키 코드 : 65, 소문자 a의 아스키 코드 : 97
 		// 즉, 소문자 알파벳의 아스키 코드값 - 32 = 대문자 알파벳의 아스키 코드값

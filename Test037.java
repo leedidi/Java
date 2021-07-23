@@ -101,7 +101,7 @@ public class Test037
 			case 1 : System.out.println("★"); break;
 			case 2 : System.out.println("★★"); break;
 			case 3 : System.out.println("★★★"); break;
-			default : System.out.println("입력 오류~!!!"); break; //(@여기 println 쓰면 따로 \n추가 안해도 됨!)
+			default : System.out.println("입력 오류~!!!"); break; //(@얘네들에 println 쓰면 따로 \n추가 안해도 됨!)
 			}
 			*/
 
@@ -110,7 +110,7 @@ public class Test037
 			{
 			default : System.out.println("입력 오류~!!!"); 
 			
-			break; //@ 위로 올려도 ㅇㅋ  아래로 내려도 ㅇㅋ! d~321 사이에 break만 있으면 됨
+			break; //@ 위로 올려도 ㅇㅋ  아래로 내려도 ㅇㅋ! default ~ case 321 사이에 break만 있으면 됨
 			
 			case 3 : System.out.print("★"); 
 			case 2 : System.out.print("★"); 
