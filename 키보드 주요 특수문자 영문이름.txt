@@ -1,0 +1,47 @@
+■■■ 키보드 주요 특수문자 영문이름 ■■■
+
+『`』  → Grave
+『~』  → Tilde		//★기억해두기
+『!』  → Exclamation Point	//잘 안 부름 이렇겐!
+『@』  → At Sign, Commercial At
+『#』  → Crosshatch, Sharp, Pound Sign
+『$』  → Dollar Sign
+『%』  → Percent Sign
+『^』  → Circumflex	//★기억해두기
+『&』  → Ampersand	//★기억해두기
+『*』  → Asterisk	// 그냥 별표, 라고도 부름
+『(』  → Left Parenthesis
+『)』  → Right Parenthesis
+『()』 → Parentheses			※ 복수형 -ses
+『-』  → Hyphen, Dash, Minus Sign
+『_』  → Underscore, UnderLine
+『=』  → Equal Sign
+『+』  → Plus Sign
+『|』  → Vertical Bar 	//★기억해두기	※ 글꼴에 영향
+『[』  → Left Bracket	// 이거도 많이 쓰임!
+『]』  → Right Bracket	// 이거도 많이 쓰임!
+『[]』 → Brackets
+『{』  → Left Brace	//★기억해두기
+『}』  → Right Brace	//★기억해두기
+『{}』 → Brace				※ 복수 형태로 사용하지 않음
+『;』  → Semicolon
+『:』  → Colon
+『"』  → Quotation Mark // -- 더블쿼테이션으로 부름(실무상)
+『'』  → Apostrophe	 // -- 싱글쿼테이션으로 부름(실무상)
+『,』  → Comma
+『.』  → Period, Full Stop, Dot	// Dot으로 제일 많이 쓰임
+『<』  → Less Than Sign, Left Angle Bracket		//★브라켓 기억해두기
+『>』  → Greater Than Sign, Right Angle Bracket	//★브라켓 기억해두기
+『<>』 → Angle Brackets
+『/』  → Slash, Virgule	// 슬러시(보통 틀렸어! 로 긋는거)
+『\』  → Back Slash, Won Sign	// 역슬러시(위의 반대방향)
+『?』  → Question Mark
+『』   → Space
+
+1. 다른 누군가 개발자가 썼을때 알아 듣기
+2. 더 나아가서 우리가 의사전달 할때도 표현할 수 있어야 함
+
+// 이거 모르면 약간.. 제가 개발자인데요 저는 독수리 타법이에요! 느낌 ㅋㅋ
+// 개발자들이 요즘 새로 개발자 뽑으면 대화가 안 돼요~~ 하는거.. 좀 줄이기 위해서.
+// 키보드 타자가 정석이 아니면 고치는게 좋긴 함....!! 오타가 나면 안보고도 고칠수 있어서..!
+// ->> 조금씩이나마 교정해 나가는게 좋긴함..! 키보드 안본 상태에서 오타 얼마나 안 나는지가 달린 문제라서!

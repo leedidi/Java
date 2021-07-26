@@ -35,13 +35,13 @@ public class Test048
 		System.out.print("임의의 정수 입력 : ");
 		n = Integer.parseInt(br.readLine());
 
-		while(i<=n)		
+		while(i<=n)												// 1<=1 / 2<=1
 		{	
-			sum += i;       // 1 ~ 270 까지 정수의 합 구하기
+			sum += i;       // 1 ~ 270 까지 정수의 합 구하기    // 1	/ 1+2
 			
-			if(i%2 == 0)	// 1 ~ 270 까지 짝수의 합 구하기
+			if(i%2 == 0)	// 1 ~ 270 까지 짝수의 합 구하기	// 0	/ 0+2
 			evensum += i;
-			else			// 1 ~ 270 까지 홀수의 값 구하기
+			else			// 1 ~ 270 까지 홀수의 값 구하기    // 1	/ 1+0
 			oddsum += i;
 
 			i++;			// i 1씩 증가

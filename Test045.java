@@ -49,7 +49,7 @@ public class Test045
 	public static void main(String[] args)
 	{
 		// 주요 변수 선언 및 초기화
-		int n=0, result=0;		//-- (주의!) 누적곱을 담을 변수(→ 1로 초기화)
+		int n=0, result=1;		//-- (주의!) 누적곱을 담을 변수(→ 1로 초기화)
 								//	  check~!!
 
 		// 연산 및 처리

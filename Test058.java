@@ -10,14 +10,15 @@
 
 // ½ÇÇà ¿¹)
 /*
-	*
-   **
-  ***
- ****
-*****
+
+*********
+ *******
+  *****
+   ***
+   	*
 
 */
-public class Test056
+public class Test058
 {
 	public static void main(String[] args)
 	{
