@@ -21,5 +21,30 @@ public class Test057
 {
 	public static void main(String[] args)
 	{
+	// 주요 변수 선언
+	int i, j, k;
+
+	// 연산 및 처리 + 결과 출력
+	for(i=1; i<=5; i++)
+	{
+		for(j=1; j<=5-i; j++)
+			System.out.printf(" ");	// 공백 출력
+
+		for(k=1; k<i*2; k++)
+			System.out.printf("*");	// 별 출력
+
+		System.out.println();
+	}
+
 	}
 }
+
+//실행 결과
+/*
+    *
+   ***
+  *****
+ *******
+*********
+계속하려면 아무 키나 누르십시오 . . .
+*/
