@@ -37,7 +37,7 @@ public class Test072
 		System.out.println("double형 데이터를 매개변수로 받는 생성자...");	
 	}
 
-		Test072(int x, double u)
+		Test072(int x, double y)
 	{	
 		//val1=x;
 		//val2=y;
@@ -88,6 +88,6 @@ int형 변수와 double형 변수를 매개변수로 받는 생성자...
 0, 0.0
 4, 0.0
 0, 4.0
-4, 0.0
+4, 4.0
 계속하려면 아무 키나 누르십시오 . . .
 */

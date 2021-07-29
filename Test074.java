@@ -41,7 +41,7 @@ public class Test074
 {
 	public static void main(String[] args)
 	{
-		// 배열 선선
+		// 배열 선언
 		int[] arr;		//int arr[];도 가능. 하지만 전자 추천. 배열은 변수가아니라 데이터타입에 의존적이기때문에 논리적으로 맞음
 						//@ 후자는 남이 이렇게 쓰면 남 코드 이해할줄 알기 때문에..
 						//@ --> int 배열 타입의 arr이야~!
