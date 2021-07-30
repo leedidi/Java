@@ -76,11 +76,11 @@ public class Test086
 			for (int j=0; j<4; j++)			// œ¼~ j ¡æ 0 1 2 3
 	 		{
 				n++;						// n ¡æ 1 2 3 4 5 ... 16
-				arr[i][j] = n;
+				arr[i][j] = n;				//@ 01 02 03
 
-				arr[i][4] += arr[i][j];
-				arr[4][j] += arr[i][j];
-				arr[4][4] += arr[i][j];
+				arr[i][4] += arr[i][j];		//@ arr04 = arr00+arr01+arr02;
+				arr[4][j] += arr[i][j];     //@ arr40 = arr00/ arr41 = arr01/ ...
+				arr[4][4] += arr[i][j];		//@ arr40 = arr00+arr01+...
 			}
 		}
 
