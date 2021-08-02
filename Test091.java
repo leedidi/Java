@@ -37,3 +37,11 @@ public class Test091
 		System.out.println("temp : " + temp);
 	}
 }
+
+// 실행 결과
+
+/*
+1000 20 30 40 50
+temp : 10
+계속하려면 아무 키나 누르십시오 . . .
+*/
