@@ -27,6 +27,11 @@ public class Test099
 		drawLine('>');
 		//--==>> >>>>>>>>>>>>>>>>>>>>
 
+		drawLine('/',50);
+		//--==>> //////////////////////////////////////////////////
+		
+		drawLine('+', 30);
+		//--==>> ++++++++++++++++++++++++++++++
 	}
 
 	// 선을 그리는 메소드 정의
@@ -54,6 +59,14 @@ public class Test099
 		System.out.println();
 	}
 
-
+	// 선의 형태와 길이를 바꾸어 그리는 메소드 정의
+	public static void drawLine(char c, int n)
+	{
+		for (int i=0; i<n; i++)
+		{
+			System.out.print(c);
+		}
+		System.out.println();
+	}
 
 }
