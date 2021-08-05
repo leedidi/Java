@@ -150,7 +150,7 @@
 	
 	//실수한게 아니라 일부러 튜닝한거야~!
 	 @Override			//-- 어노테이션(annotation) - metadata - JDK 1.5
-						//@ "@Override" 이거 써도되고 안써도되고 x 써줘야 함!
+						//@ "@Override" 이거 써도되고 안써도되고 x. 써줘야 함!
 	 public void write()
 	 {
 		 System.out.println("w : " + w + ", h : " + h);
@@ -196,6 +196,8 @@ class Circle108 extends SuperTest108
 		// super();   //@ 이게 자동으로 삽입됨 //--==>> SuperTest108... 인자 없는 생성자
 		super(title); //@ 인자있는 생성자 삽입하고 싶다면 이거 쓰기 //--==>> SuperTest108... 문자열을 인자로 받는 생성자
 	}
+	//@@@ 문자열을 인자로 받는 사용자 정의 생성자에서도 super(); 디폴트로 삽입 되나,,,? 안되나,,,? 안되는거 같음,,! 아 되는거같기도,,
+	//@@@ defalt 생성자는 public Circle108() ~ super(); 이거 얘기하는 건가 싶기도 함
 
 	public void calc(int r)
 	{

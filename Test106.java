@@ -94,6 +94,7 @@ public class Test106
 				
 				// flag 넣어서 flag = true면 이름도 바꾸기
 				
+				//* 아마 선택정렬, 향상된 배열 혼용해서 오류난듯..! 둘은 조건이 다르게 돌리기때문에 혼용 안됨
 				/*
 				if (flag == true)
 				{
