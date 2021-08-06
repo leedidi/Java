@@ -1,7 +1,7 @@
-/*=========================================
+/*==============================
    ■■■ 클래스 고급 ■■■
    - 인터페이스(Interface)
- =========================================*/
+ ==============================*/
 
 /*
 ○ 인터페이스(Interface)란
@@ -65,17 +65,67 @@ interface Demo
 	//@ 선언만 가능, 정의는 불가능
 }
 
+// 클래스
 //class DemoImpl
 //class DemoImpl extends Demo (Ⅹ)
 //abstract class DemoImpl extends Demo (Ⅹ)
 //class DemoImpl implements Demo (Ⅹ)
-abstract class DemoImpl implements Demo
-{
+// ↓
+//추상 클래스 - 인터페이스를 구현하는 추상 클래스
+//abstract class DemoImpl implements Demo
+// ↓
+// 클래스 - 인터페이스를 구현하는 클래스
+class DemoImpl implements Demo
+{	
+	//public void print();
+	@Override
+	public void print()
+	{
+		System.out.println("인터페이스 메소드 재정의...");
+	}
+
+	public void write()
+	{
+		System.out.println("클래스에 정의된 메소드...");
+	}
 }
 
+// main() 메소드를 포함하고 있는 외부의 다른 클래스
 public class Test113
 {
 	public static void main(String[] args)
 	{
-	}
+		//Demo ob = new Demo();				// 생성 불가~!!!
+
+		//DemoImpl ob = new DemoImpl();		// 생성 불가~!!!
+		//-- print() 메소드 재정의 후 가능~!!!
+		
+		//DemoImpl obTemp = new DemoImpl();
+		//Demo ob = (Demo)obTemp;
+		//@ 클래스에게 구현시키는게 implements 로 바뀐거 말고는 클래스의 상위객체로 동일! 클래스를 상속받았을때와 거의 동일
+		//Demo ob = obTemp;
+		
+		// ○ 업 캐스팅
+		// 인터페이스 객체는 상위 객체
+		Demo ob = new DemoImpl();
+		ob.print();
+		//--==>> 인터페이스 메소드 재정의...
+
+		//ob.write();
+		//--==>> 에러 발생(컴파일 에러)
+		
+		// ○ 다운 캐스팅
+		((DemoImpl)ob).write();
+		//--==>> 클래스에 정의된 메소드...
+
+		System.out.println(Demo.PI);	//-- static 이기 때문에 가능!
+		//--==>> 3.141592
+
+		System.out.println(Demo.a);		//-- static 이기 때문에 가능!
+		//--==>> 10
+
+		//Demo.a = 30;					//-- final 이기 때문에 불가능!
+		//--==>> 에러 발생
+
+		}
 }
