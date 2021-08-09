@@ -15,7 +15,7 @@ class InnerOuterTest
 		int c = 30;
 
 		void write()
-		{
+		{ 
 			System.out.println("inner 의 write()...");
 			System.out.println("a : " + a);
 			System.out.println("b : " + b);
@@ -55,6 +55,7 @@ public class Test120
 		
 		// ※ check~!!!
 		// ※ Test118.java 파일과 비교할 것~!!!
+		//@ 요기는 static이 아니라 걍 class 라서 다른가봄!
 
 		//@ ★ 기억해두기! Test120번에서 이거 하나만 기억해놔도 성공한 것!
 		// 『new InnerOuterTest().new InnerNested();』
