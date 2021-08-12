@@ -93,7 +93,7 @@ class Lotto
 	}
 
 	// 6개의 난수를 발생시키는 메소드 정의
-	//@ 받기만 할 것이므로 void, 외부에서 사용할 것이므로  public
+	//@ 받기만 할 것이므로 void, 외부에서 사용할 것이므로 public
 	public void start()
 	{
 		Random rd = new Random();
