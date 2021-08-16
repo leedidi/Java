@@ -306,6 +306,7 @@ public class Test159_C
     	System.out.println("\t프로그램 종료");
 		System.exit(-1);
 	}
+
 	//main() 메소드 --완성
 	public static void main(String[] args) throws IOException
 	{
