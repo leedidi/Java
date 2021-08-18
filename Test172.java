@@ -33,7 +33,7 @@ public class Test172
 			// (→ OutputStreamWriter 가 수행)
 			// Writer 타입의 wt에서 참조할 수 있도록 처리
 			Writer wt = new OutputStreamWriter(System.out);
-			//@문자기반스스트림 // 문자기반스트림으로 바꿔줌 //바이트기반 출력스트림
+			//@문자기반스트림 // 문자기반스트림으로 바꿔줌 //바이트기반 출력스트림
 
 			while ((data = rd.read()) != -1)
 			{
