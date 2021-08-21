@@ -40,6 +40,8 @@ public class Storagechange
 			}
 			System.out.println("\n입력에 문제가 있습니다.\n");	// 연산자 올바르지 않게 입력 시 메세지 표시 후 다시 입력받음	
 		}
+
+		mStorageCategory();
 		
 	}// end mStorageChange()
 
@@ -57,6 +59,9 @@ public class Storagechange
 			}
 			System.out.println("\n입력에 문제가 있습니다.\n");	// 카테고리 올바르지 않게 입력 시 메세지 표시 후 다시 입력받음	
 		}
+
+		mStorageFoodSelect();
+
 	}// end mStorageCategory()
 
 
@@ -69,29 +74,32 @@ public class Storagechange
 			
 			if (ctSelect==1)	
 			{
-				if(num<is.vVeg.size() && num>=0) //조건: [1. 야채/ (1 - 야채의 마지막 재료 번호) 까지 입력시] 
+				if(num<is.vVeg.size() && num>=0) //조건: [1. 야채/ (1부터 야채의 마지막 재료 번호) 까지 입력시] 
 				{
 					break;  // 재료 입력칸 통과
 				}
 			}
 			else if (ctSelect==2)
 			{
-				if(num<is.vMain.size() && num>=0) //조건: [2. 메인/ (1 - 메인의 마지막 재료 번호) 까지 입력시] 
+				if(num<is.vMain.size() && num>=0) //조건: [2. 메인/ (1부터 메인의 마지막 재료 번호) 까지 입력시] 
 				{
 					break;  // 재료 입력칸 통과
 				}
 			}
 			else if (ctSelect==3)
 			{
-				if(num<is.vSource.size() && num>=0) //조건: [3. 소스/ (1 - 소스의 마지막 재료 번호) 까지 입력시]
+				if(num<is.vSource.size() && num>=0) //조건: [3. 소스/ (1부터 소스의 마지막 재료 번호) 까지 입력시]
 				{
 					break;  // 재료 입력칸 통과
 				}
 			}
 
-			System.out.println("잘못 입력하셨습니다.");	// 각 카테고리의 재료 번호 잘못 입력시 메세지 출력
+			System.out.println("잘못 입력하셨습니다.");	// 각 카테고리의 재료 번호 잘못 입력시 메세지 표시 후 다시 입력받음	
 
 		}
+
+		mStorageFoodNum();
+
 	}// end mStorageFoodSelect()
 
 
@@ -102,42 +110,32 @@ public class Storagechange
 			System.out.print("재료 수량 : "); // 재료 추가/ 삭제할 수량 입력
 			su = Integer.parseInt(br.readLine());
 			
-			//추가
-			/*
-			if(su<50) // 조건: 50개 이하로 입력시(*임의)
-			{
-				break;  // 재료 입력칸 통과
-			}
-			System.out.println("\n입력에 문제가 있습니다.\n")
-			*/
-
-
-			// 재료 추가시 : 50개 이하로 입력
-			// 재료 삭제시 : 해당 재료의 현재 개수 이상 입력시 오류(-)될 수 없도록
+			// 재료 추가시 : 총 재료 개수(원래 재료+추가 입력 재료) 50개 이하로 입력
+			// 재료 삭제시 : 해당 재료의 현재 개수 이상 입력할 수 없도록 함
 			if (oper.equals("+"))
 			{
 				
 				if (ctSelect==1)	
 				{
-					if((su+is.vVeg.get(num).num)<=50) // 조건: 50개 이하로 입력시(*임의)
+					if((su+is.vVeg.get(num).num)<=50) // [1. 야채/ 조건: 각 재료당 총 재료 개수 50개 이하일 시]
 					{
-						break;  // 재료 입력칸 통과
+						break;  // 재료 번호 입력칸 통과
 					}
-					System.out.println("\n입력에 문제가 있습니다.\n");
+					System.out.println("\n입력에 문제가 있습니다.\n"); // 올바르지 않게 입력 시 메세지 표시 후 다시 입력받음	
 				}
 				else if (ctSelect==2)
 				{
-					if((su+is.vMain.get(num).num)<=50) // 조건: 50개 이하로 입력시(*임의)
+					if((su+is.vMain.get(num).num)<=50) // [2. 육류/ 조건: 각 재료당 총 재료 개수 50개 이하일 시]
 					{
-						break;  // 재료 입력칸 통과
+						break;  // 재료 번호 입력칸 통과
 					}
-					System.out.println("\n입력에 문제가 있습니다.\n");
+					System.out.println("\n입력에 문제가 있습니다.\n"); 
 				}
 				else if (ctSelect==3)
 				{
-					if((su+is.vSource.get(num).num)<=50) // 조건: 50개 이하로 입력시(*임의)
+					if((su+is.vSource.get(num).num)<=50) // [2. 소스/ 조건: 각 재료당 총 재료 개수 50개 이하일 시]
 					{
-						break;  // 재료 입력칸 통과
+						break;  // 재료 번호 입력칸 통과
 					}
 					System.out.println("\n입력에 문제가 있습니다.\n");
 				}
@@ -146,27 +144,34 @@ public class Storagechange
 			else
 				if (ctSelect==1)	
 				{
-					if(su<=is.vVeg.get(num).num) //조건: [1. 야채/ 해당 재료의 현재 최대수량까지 입력시] 
+					if(su<=is.vVeg.get(num).num) //조건: [1. 야채/ (1부터 해당 재료의 현재 수량)까지 입력시] 
 					{
-						break;  // 재료 입력칸 통과
+						break;  // 재료 수량 입력칸 통과
 					}
+					System.out.println("\n입력에 문제가 있습니다.\n"); // 올바르지 않게 입력 시 메세지 표시 후 다시 입력받음	
 				}
 				else if (ctSelect==2)
 				{
-					if(su<=is.vMain.get(num).num) //조건: [2. 메인/ 해당 재료의 현재 최대수량까지 입력시] 
+					if(su<=is.vMain.get(num).num) //조건: [2. 육류/ (1부터 해당 재료의 현재 수량)까지 입력시] 
 					{
-						break;  // 재료 입력칸 통과
+						break;  // 재료 수량 입력칸 통과
 					}
+					System.out.println("\n입력에 문제가 있습니다.\n"); 	
 				}
 				else if (ctSelect==3)
 				{
-					if(su<=is.vSource.get(num).num) //조건: [3. 소스/  해당 재료의 현재 최대수량까지 입력시]
+					if(su<=is.vSource.get(num).num) //조건: [3. 소스/ (1부터 해당 재료의 현재 수량)까지 입력시]
 					{
-						break;  // 재료 입력칸 통과
+						break;  // 재료 수량 입력칸 통과
 					}
+					System.out.println("\n입력에 문제가 있습니다.\n"); 	
 				}
 
 		}
+
+		mStorageRun();
+
+
 	}// end mStorageFoodNum()
 
 	
@@ -177,10 +182,10 @@ public class Storagechange
 			System.out.println("\n재고를 삭제하시겠습니까? (Y/N)"); // 재고를 삭제하시겠습니까? 메세지 출력
 			String yn = br.readLine();
 
-			if(yn.equals("y")||yn.equals("Y"))
+			if(yn.equals("y")||yn.equals("Y")) // 구매자가 Y, y 입력한 경우
 			{
 			
-				switch (ctSelect)	// 각 카테고리 1,2,3 입력시 해당 카테고리, 각 번호 입력시 각 번호의 재료 개수에서 개수 삭제
+				switch (ctSelect)	// (각 카테고리 1,2,3 입력시 해당 카테고리 + 각 번호 입력시 각 번호)재료의 개수에서 입력 개수 삭제
 				{
 					case 1 : is.vVeg.get(num).num = is.vVeg.get(num).num - su; break;
 					case 2 : is.vMain.get(num).num = is.vMain.get(num).num - su; break;
@@ -201,10 +206,10 @@ public class Storagechange
 		}
 		else
 		{
-			System.out.println("\n재고를 추가하시겠습니까? (Y/N)");
+			System.out.print("\n재고를 추가하시겠습니까? (Y/N) : "); // 재고를 추가하시겠습니까? 메세지 출력
 			String yn = br.readLine();
 
-			if(yn.equals("y")||yn.equals("Y"))
+			if(yn.equals("y")||yn.equals("Y"))	// 구매자가 Y, y 입력한 경우
 			{
 
 				switch (ctSelect) // 각 카테고리 1,2,3 입력시 해당 카테고리, 각 번호 입력시 각 번호의 재료 개수에서 개수 추가
@@ -214,7 +219,7 @@ public class Storagechange
 					case 3 : is.vSource.get(num).num = is.vSource.get(num).num + su; break;
 					default : System.out.println("잘못 입력하셨습니다.");
 				}
-				if (ctSelect == 1 || ctSelect == 2 || ctSelect == 3) // 재료 개수 추가시, 삭제 메시지 출력
+				if (ctSelect == 1 || ctSelect == 2 || ctSelect == 3) // 재료 개수 추가시, 추가 메시지 출력
 				{
 					System.out.println("재료가 추가되었습니다.");
 				}
@@ -225,7 +230,33 @@ public class Storagechange
 			}
 		}
 
+		mStorageReturn();
+
 	}// end mStorageRun()
+
+
+
+	public void mStorageReturn() throws IOException
+	{
+		// Password 인스턴스 생성
+		Password pw = new Password();
+
+		System.out.print("추가로 작업을 수행하시겠습니까? (Y/N) : ");
+
+		String yn = br.readLine();
+
+		// 'y' 입력시 추가 수행
+		if(yn.equals("y")||yn.equals("Y"))
+		{
+			mStorageChange();
+		}
+		// 다른거 입력시 처음 화면으로
+		else
+		{
+			pw.modeRun();
+		}
+
+	}// end mStorageReturn()
 
 
 

@@ -8,6 +8,7 @@ public class Password
 	private static BufferedReader br;
 	private static Integer sel;
 
+	// static 초기화 블럭
 	static
 	{
 		// BufferedReader 인스턴스 생성
@@ -17,33 +18,78 @@ public class Password
 		sel = 1;
 	}
 
-	public void modePrint()
+	// 패스워드 입력 메소드
+	public void inputPass() throws IOException
 	{
+		// 패스워드, 입력횟수 변수
+		int pass;
+		int count=1;
+
+		// 패스워드 입력시 반복문 빠져나오고
+		// 5회 이상 입력 실패시 프로그램 종료
+		do
+		{
+			System.out.print("패스워드를 입력하세요 : ");
+			pass = Integer.parseInt(br.readLine());
+			count++;
+			if (count>5)
+			{
+				System.out.println("입력횟수를 초과하였습니다.");
+				exit();
+			}
+		}
+		while (pass != 210714);
+	}
+
+	
+	public void modePrint() // 메뉴 출력 메소드
+	{
+		System.out.println();
 		System.out.println("1. 관리자 모드");
 		System.out.println("2. 판매 모드");
 		System.out.println("3. 종료");
 		System.out.println();
-		System.out.print(">> 메뉴 선택(1~3) : ");
 	}
 
-	public void modeSeclect() throws IOException
+	public void modeSelect() throws IOException // 메뉴 선택 메소드
 	{
+		// 1~3 외에 다른 값을 넣으면 반복
 		do
 		{
+			System.out.print(">> 메뉴 선택(1~3) : ");
 			sel = Integer.parseInt(br.readLine());
 		}
 		while (sel<1 || sel>3);
 		
 	}
 
-	public void modeRun()
+	public void modeRun() throws IOException // 메뉴 호출 메소드
 	{
+		// ManagerMode 인스턴스 생성
+		ManagerMode mm = new ManagerMode();
+
+		// 입력받은 값에 따라 실행
 		switch (sel)
 		{
-		case Menus.E_ONE : ???; break;
-		case Menus.E_TWO : ???; break;
-		case Menus.E_THREE : return;
-		default : System.out.println(">> 메뉴 선택 오류~!!!"); break;
+			case Menus.E_ONE :						// 관리자 모드로
+				{
+					mm.mMenuPrint();
+					mm.mMenuSelect();
+					mm.mMenuRun();
+				}
+				break;
+			case Menus.E_TWO : ; break;				// check~!!! 판매 모드로
+			case Menus.E_THREE : exit(); break;		// 프로그램 종료
+			default : System.out.println(">> 메뉴 선택 오류~!!!"); break;
 		}
+
 	}
+
+	public void exit() // 시스템 종료 메소드
+	{
+		System.out.println();
+		System.out.println("프로그램 종료");
+		System.exit(-1);
+	}
+
 }
