@@ -21,16 +21,16 @@ public class ManagerMode
 	public void mMenuPrint() // 메뉴 출력 메소드
 	{
 		System.out.println();
-		System.out.println("---------------------------");
-		System.out.println("|                         |");
-		System.out.println("|       [메뉴 출력]       |");
-		System.out.println("|                         |");
-		System.out.println("|   1. 요청사항 확인      |");
-		System.out.println("|   2. 재고 관리          |");
-		System.out.println("|   3. 금고 관리          |");
-		System.out.println("|   4. 모드 선택          |");
-		System.out.println("|                         |");
-		System.out.println("---------------------------");
+		System.out.println("┌──────────────────────────┐");
+		System.out.println("│                          │");
+		System.out.println("│       [메뉴 출력]        │");
+		System.out.println("│                          │");
+		System.out.println("│     1. 요청사항 확인     │");
+		System.out.println("│     2. 재고 관리         │");
+		System.out.println("│     3. 금고 관리         │");
+		System.out.println("│     4. 모드 선택         │");
+		System.out.println("│                          │");
+		System.out.println("└──────────────────────────┘");
 		System.out.println();
 	}
 
@@ -73,10 +73,14 @@ public class ManagerMode
 	}
 
 
-	// ☆☆☆ 구성중 ☆☆☆
+	// ★★★완성★★★
 	public void mNote() // 요청사항 확인 메소드
 	{
-		System.out.println("요청사항 확인 메소드");
+		for (int i=0; i<UserMode.vNote.size(); i++)
+		{
+			System.out.println((i+1) + ". " + UserMode.vNote.get(i));
+		}
+		
 	}
 
 
@@ -91,11 +95,13 @@ public class ManagerMode
 	}
 
 
-	// ☆☆☆ 구성중 ☆☆☆ (품목 추가만 가져와서 넣으면 됨)
+	// ★★★완성★★★
 	public void mStorage() throws IOException // 재고 관리 메소드
 	{
 		// Storagechange 인스턴스 생성
-		Storagechange stc = new Storagechange();
+		MStorage stc = new MStorage();
+
+		MStorageNew msn = new MStorageNew();
 
 		mStorageSelect();
 
@@ -117,17 +123,13 @@ public class ManagerMode
 				mStock();
 
 				stc.mStorageChange();
+			} break;
+			case Menus.E_TWO : 
+			{
+				mStock();
 
-				stc.mStorageCategory();
-
-				stc.mStorageFoodSelect();
-
-				stc.mStorageFoodNum();
-
-				stc.mStorageRun();
-			}
-			break;
-			case Menus.E_TWO : ; break;		// 품목 추가 / 삭제로
+				msn.mAddRemove();
+			} break;		// 품목 추가 / 삭제로
 			default : System.out.println("잘못 입력하셨습니다."); break;
 		}
 

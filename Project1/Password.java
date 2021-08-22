@@ -67,6 +67,8 @@ public class Password
 	{
 		// ManagerMode 인스턴스 생성
 		ManagerMode mm = new ManagerMode();
+		
+		UserMode um = new UserMode();
 
 		// 입력받은 값에 따라 실행
 		switch (sel)
@@ -78,7 +80,12 @@ public class Password
 					mm.mMenuRun();
 				}
 				break;
-			case Menus.E_TWO : ; break;				// check~!!! 판매 모드로
+			case Menus.E_TWO :
+				{
+					um.uMenuPrint();
+					um.uMenuSelect();
+					um.uMenuRun();
+				}; break;				// check~!!! 판매 모드로
 			case Menus.E_THREE : exit(); break;		// 프로그램 종료
 			default : System.out.println(">> 메뉴 선택 오류~!!!"); break;
 		}

@@ -8,6 +8,9 @@ public class ISetup
 	Vector<Ingredient> vSource = new Vector<Ingredient>();
 	Vector<Ingredient> vTop = new Vector<Ingredient>();
 
+	//Vector<Ingredient> vPaytemp = new Vector<Ingredient>();	// 결제가 완료되면 재료 수량이 담기는 벡터	
+	//Vector<int> vPaymoney = new Vector<int>();			    // 결제가 완료되면 금액이 담기는 벡터. .
+
 
 	public void firstSet()	//초기재료세팅
 	{	
