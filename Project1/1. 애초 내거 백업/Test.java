@@ -10,6 +10,5 @@ public class Test
 		MMoneyCheck mc = new MMoneyCheck();
 		mc.mMoneyPrint();
 		mc.mMoneyReturn();
-
 	}
 }
